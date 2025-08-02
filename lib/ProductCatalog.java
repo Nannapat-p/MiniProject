@@ -12,7 +12,7 @@ public class ProductCatalog {
             throw new RuntimeException("RI violated : product is null");
         }
         for (int i = 0; i < products.size(); i++) {
-            for (int j = 0; j < products.size(); j++) {
+            for (int j = i + 1; j < products.size(); j++) {
                 if (products.get(i).equals(products.get(j))) {
                      throw new RuntimeException("RI violated : duplicate product");
                 }
