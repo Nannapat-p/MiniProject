@@ -20,7 +20,10 @@ public class ShoppingCart {
       checkRep();
     }
     public void addItem(String productID,int quantity){
+         if (quantity <= 0) return;
         Product product = productCatalog.findById(productID);
+
+        
         if (product == null) {
             return ;
         }

@@ -70,7 +70,7 @@ public class App{
         check("Remove item correctly updates count and price", cart.getItemCount() == 1 && cart.getTotalPrice() == 30.0);
 
         cart.removeItem("P999"); // Remove non-existent item
-        check("Removing non-existent item does not change cart", cart.getItemCount() == 1 && cart.getTotalPrice() == 30.0);
+        check("Removing non-existent item does not change cart", cart.getItemCount() == 1 && cart.getTotalPrice() == 30.0); 
         
         cart.clearCart();
         check("Clear cart works correctly", cart.getItemCount() == 0 && cart.getTotalPrice() == 0.0);
